@@ -4,11 +4,193 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Css starter</title>
+  <title>Bookmark</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <!-- icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+  <!-- /fonts -->
   <link rel="stylesheet" href="/Css/normalize.css">
   <link rel="stylesheet" href="/Css/styles.css">
 </head>
 <body>
-  <script src="/js/main.js"></script>
-</body>
-</html>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container site-header__container">
+      <a class="site-header__logo" href="index.html" >
+        <img class="site-header__img" src="/img/logo.svg" alt="logo">
+      </a>
+      <nav class="sitenav site-header__sitenav">
+        <ul class="sitenav__list">
+          <li class="sitenav__item"><a  class="sitenav__link"  href="#">about</a></li>
+          <li class="sitenav__item"><a  class="sitenav__link"  href="#">features</a></li>
+          <li class="sitenav__item"><a  class="sitenav__link"  href="#">pricing</a></li>
+          <li class="sitenav__item"><a  class="sitenav__link"  href="#">contact</a></li>
+          <li class="sitenav__item"><a  class="sitenav__link"  href="#">help</a></li>
+        </ul>
+      </nav>
+      <a  class="btn btn--small" href="#">Login</a>
+    </div>
+  </header>
+  <!-- /HEADER -->
+  <main class="main-content">
+    <!-- HERO -->
+    <div class="hero">
+      <div class="container hero__container">
+        <div class="hero__content">
+          <h1 class="hero__heading">A Simple Bookmark Manager</h1>
+          <p class="title hero__title">A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
+          <div class="hero__actions">
+            <a href="#" class="btn btn__big--blue hero__actions--item">Get it on Chrome</a>
+            <a href="#" class="btn btn__big--white hero__actions--item">Get it on Firefox</a>
+          </div>
+        </div>
+        <img src="/img/Group 2 (1).svg" alt="desktop" class="hero__img">
+      </div>
+    </div>
+    <!-- /HERO -->
+    
+    <!-- FEATURES -->
+    <section class=" features">
+      <div class="container">
+        <h2 class="section__subtitle  features__heading">Features</h2>
+        <p class="section__title features__title">Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
+      </div>
+      <!-- TABS -->
+      <div class="tabs">
+        <ul class="tabs__items">
+          <li class="tabs__item tabs__link--active ">
+            <a href="#feature-simple-bookmarking" class="tabs__link js-tab-link">Simple Bookmarking</a>
+          </li>
+          <li class="tabs__item">
+            <a href="#feature-speedy-searching" class="tabs__link js-tab-link">Speedy Searching</a>
+          </li>
+          <li class="tabs__item">
+            <a href="#feature-easy-sharing" class="tabs__link js-tab-link">Easy Sharing</a>
+          </li>
+        </ul>
+        <!-- Tabs content -->
+        <div class="tabs__panels">
+          <div class="container">
+            <div class="tabs__panel tabs__panel--active" id="feature-simple-bookmarking">
+              <section class="feature-tab-panel">
+                <img class="feature-tab-panel__img" src="/img/left.svg" alt="Bookmark manager" width="536" height="346" >
+                <div class="feature-tab-panel__info">
+                  <h3 class="feature-tab-panel__title">Bookmark in one click</h3>
+                  <p class="feature-tab-panel__text">Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
+                  <a href="#" class="btn btn--small">More Info</a>
+                </div>
+              </section>
+            </div>
+            <!-- ....................... -->
+            <div class="tabs__panel" id="feature-speedy-searching">
+              <section class="feature-tab-panel ">
+                <img class="feature-tab-panel__img" src="/img/search.svg" alt="Bookmark search" width="468" height="393" >
+                <div class="feature-tab-panel__info">
+                  <h3 class="feature-tab-panel__title">Intelligent search</h3>
+                  <p class="feature-tab-panel__text">Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.</p>
+                  <a href="#" class="btn btn--small">More Info</a>
+                </div>
+              </section>
+            </div>
+            <!-- ............................................................. -->
+            <div class="tabs__panel" id="feature-easy-sharing">
+              <section class="feature-tab-panel">
+                <img class="feature-tab-panel__img" src="/img/share.svg" alt="Bookmark share" width="440" height="380" >
+                <div class="feature-tab-panel__info">
+                  <h3 class="feature-tab-panel__title">Share your bookmarks</h3>
+                  <p class="feature-tab-panel__text">Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.</p>
+                  <a href="#" class="btn btn--small">More Info</a>
+                </div>
+              </section>
+              </div>
+            </div>
+          </div>
+          </div>
+          </section>
+    <!-- /FEATURES -->
+    <!-- EXTENSION -->
+    <section class="section features">
+      <div class="container">
+        <h2 class="section__subtitle  features__heading">Download the extension</h2>
+        <p class="section__title">We’ve got more browsers in the pipeline. Please do let us know if you’ve got a favourite you’d like us to prioritize.</p>
+      </div>
+    </section>
+    <div class="browser">
+      <div class="container">
+        <ul class="features__items">
+          <li class="features__item">
+            <div class="features__block">
+              <img src="/img/chrome.svg" alt="chrome" class="features__block--image">
+              <h3 class="features__block--subtitle">Add to Chrome</h3>
+              <p class="features__block--title">Minimum version 62</p>
+              <a class="btn btn__big--large" href="#">Add & Install Extension</a>
+            </div>
+          </li>
+          <li class="features__item">
+            <div class="features__block">
+              <img src="/img/firefox .svg" alt="firefox" class="features__block--image">
+              <h3 class="features__block--subtitle">Add to Firefox</h3>
+              <p class="features__block--title">Minimum version 55</p>
+              <a class="btn btn__big--large" href="#">Add & Install Extension</a>
+            </div>
+          </li>
+          <li class="features__item">
+            <div class="features__block">
+              <img src="/img/opera.svg" alt="opera" class="features__block--image">
+              <h3 class="features__block--subtitle">Add to Opera</h3>
+              <p class="features__block--title">Minimum version 46</p>
+              <a class="btn btn__big--large" href="#">Add & Install Extension</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- FAQ -->
+    <section class="section features">
+      <div class="container">
+        <h2 class="section__subtitle  features__heading">Frequently Asked Questions</h2>
+        <p class="section__title">Here are some of our FAQs. If you have any other questions you’d like answered please feel free to email us.</p>
+      </div>
+    </section>
+    
+    <!-- CTA -->
+    <section class="cta">
+      <div class="container">
+        <p class="cta__title">35,000+ ALREADY JOINED</p>
+        <h2 class="cta__subtitle">Stay up-to-date with what <br>
+          we’re doing</h2>
+          <form action="https://echo.htmlacademy.ru" class="cta__form" method="post">
+            <input class="cta__input" type="email" required placeholder="Enter your email address">
+            <button type="button" class="btn btn__cta">Contact Us</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer__container">
+        <a class="footer__logo" href="#" >
+          <img class="footer__img" src="/img/logo-white .svg" alt="footer logo" >
+        </a>
+        <nav class="footer__nav">
+          <ul class="footer__list">
+            <li class="footer__item"><a  class="footer__link"  href="#">FEATURES</a></li>
+            <li class="footer__item"><a  class="footer__link"  href="#">PRICING</a></li>
+            <li class="footer__item"><a  class="footer__link"  href="#">CONTACT</a></li>
+          </ul>
+        </nav>
+        <div class="footer__icons">
+          <a  class="footer__icons--link" href="#">
+            <i class="fa-brands fa-square-facebook"></i>
+          </a>
+          <a class="footer__icons--link" href="#">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="/js/main.js"></script>
+  </body>
+  </html>
