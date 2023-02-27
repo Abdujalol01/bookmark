@@ -452,6 +452,7 @@ img{
   background-color: var(--btn-blue);
   padding: 10px 35px;
   border:1px solid  var(--btn-blue);
+  margin-bottom: 24px;
 }
 .btn__big--large:hover{
   background-color: white;
