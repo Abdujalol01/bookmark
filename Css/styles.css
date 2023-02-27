@@ -269,11 +269,20 @@ img{
 .feature-tab-panel {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 .feature-tab-panel__img {
   margin-right: 30px;
   object-fit: cover;
+}
+.feature-tab-panel__img--bookmark-market{
+  margin-right: 125px;
+}
+.feature-tab-panel__img--speedy-searching{
+  margin-right: 118px;
+}
+.feature-tab-panel__img--easy-sharing{
+  margin-right: 125px;
 }
 .feature-tab-panel__info {
   max-width: 445px;
@@ -352,6 +361,97 @@ img{
   mix-blend-mode: normal;
   opacity: 0.5;
 }
+/* Faq inner */
+.faq{
+  padding-bottom: 150px;
+}
+.faq__inner{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 540px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.faq__accordion{
+  margin-bottom: 54px;
+  width: 100%;
+}
+.accordion {
+  border-top: 1px solid rgba(36, 42, 69, 0.15);
+}
+.accordion__item {
+  border-bottom: 1px solid rgba(36, 42, 69, 0.15);
+}
+.accordion__item--header {
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 13px;
+  position: relative;
+}
+.accordion__item--title {
+  flex-grow: 1;
+  margin: 0px;
+  margin-right: 24px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  color: #242A45;
+  text-align: justify;
+}
+.accordion__item--title:hover{
+  color: var(--red-line);
+}
+.accordion__item--toggler {
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+.accordion__item--toggler:focus::before{
+  outline: auto;
+}
+.accordion__item--toggler:focus{
+  outline: none;
+}
+.accordion__item--toggler::before{
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.accordion__item--toggler-icon{
+  color:#5267DF;
+  display: block;
+  width: 20px;
+  height: 13px;
+}
+
+.accordion__item--content {
+  padding-top: 19px;
+  padding-bottom: 29px;
+  color: var(--text-color);
+  text-align: justify;
+  display: none;
+  opacity: 0.75;
+}
+.accordion__item--text-open .accordion__item--content{
+  display: block;
+}
+.accordion__item--text-open .accordion__item--toggler-icon{
+  transform: rotate(180deg);
+  color: var(--red-line);
+}
+.accordion__item--text {
+  margin: 0px;
+}
+.accordion__item--text:not(:last-child){
+  margin-bottom: 12px;
+}
 .btn__big--large{
   background-color: var(--btn-blue);
   padding: 10px 35px;
@@ -360,6 +460,11 @@ img{
 .btn__big--large:hover{
   background-color: white;
   color: var(--btn-blue);
+}
+.btn--accordion{
+  background-color: var(--btn-blue);
+  padding: 10px 24px;
+  margin-bottom: 150px;
 }
 .browser{
   padding-bottom: 149px;
@@ -452,7 +557,7 @@ img{
 .footer__link:hover{
   color: var(--red-line);
 }
-.footer__link:action{
+.footer__link:active{
   opacity: 0.6;
 }
 .footer__icons {
