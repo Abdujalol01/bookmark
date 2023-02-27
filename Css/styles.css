@@ -328,7 +328,6 @@ img{
   margin-top: 80px;
 }
 .features__block {
-  margin-bottom: 24px;
   padding-top: 49px;
   display: flex;
   flex-direction: column;
@@ -401,9 +400,6 @@ img{
   color: #242A45;
   text-align: justify;
 }
-.accordion__item--title:hover{
-  color: var(--red-line);
-}
 .accordion__item--toggler {
   border: 0;
   padding: 0;
@@ -462,8 +458,6 @@ img{
   color: var(--btn-blue);
 }
 .btn--accordion{
-  background-color: var(--btn-blue);
-  padding: 10px 24px;
   margin-bottom: 150px;
 }
 .browser{
@@ -528,6 +522,7 @@ img{
 .footer__logo {
   display: block;
   margin-right: 63px;
+  padding-top: 5px;
 }
 .footer__img {
   width: 148px;
