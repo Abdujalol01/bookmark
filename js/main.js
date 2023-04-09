@@ -1,45 +1,43 @@
-const elsTabLink = document.querySelectorAll('.js-tab-link');
-const elsTabItem = document.querySelectorAll('.tabs__item');
-const elsTabPanel = document.querySelectorAll('.tabs__panel');
-const elsAccordionItem =document.querySelectorAll('.accordion__item');
-const elsAccordionButton = document.querySelectorAll('.accordion__item--toggler');
-
-const modifiers ={
-  tabItemActive:'tabs__link--active' ,
-  tabPanelActive:'tabs__panel--active'
-};
+const tabsPanel = document.querySelectorAll(".tabs__panel") ,
+tabsItem = document.querySelector(".tabs__items"),
+tabLinks = document.querySelectorAll(".tabs__link"),
+tabsList = document.querySelectorAll(".tabs__item"),
+elToggler = document.querySelectorAll(".accordion__item--toggler"),
+accordionContent = document.querySelectorAll(".accordion__item--content");
 
 
-function close( ){
-  elsAccordionItem.forEach(function(elAccordionItem){
-    elAccordionItem.classList.remove('accordion__item--text-open');
+
+function close(){
+  tabsPanel.forEach(item =>{
+    item.classList.add("hide");
+    item.classList.remove("show");
+  });
+  tabsList.forEach(item=>{
+    item.classList.remove("tabs__link--active");
   });
 }
-function deactivateTabItems ( ){
-  elsTabItem.forEach(function(elTabItem){
-    elTabItem.classList.remove(modifiers.tabItemActive);
-  });
+
+function open( i=0){
+  tabsPanel[i].classList.add("show");
+  tabsPanel[i].classList.remove("hide");
+  tabsList[i].classList.add("tabs__link--active");
 }
-function deactivateTapsPanel(){
-  elsTabPanel.forEach(function(elTabPanel){
-    elTabPanel.classList.remove(modifiers.tabPanelActive);
-  });
-}
-elsTabLink.forEach(function(elTabLink){
-  elTabLink.addEventListener('click' , function(evt){
-    evt.preventDefault();
-    deactivateTabItems ( );
-    elTabLink.parentElement.classList.add(modifiers.tabItemActive);
-    deactivateTapsPanel( );
-    const elTargetPanel = document.querySelector(`#${elTabLink.href.split('#')[1]}`);
-    elTargetPanel.classList.add(modifiers.tabPanelActive);
-  });
-  
+tabsItem.addEventListener("click", (event)=>{
+  const target= event.target;
+  if(target &&target.classList.contains("tabs__link")){
+    tabLinks.forEach((item,idx)=>{
+      if(target == item){
+        close();
+        open(idx);
+      }
+    });
+  }
 });
 
-elsAccordionButton.forEach(function(elAccordionButton){
-  elAccordionButton.addEventListener('click' , function(){
-    close( );
-    elAccordionButton.closest('.accordion__item').classList.add('accordion__item--text-open');
+elToggler.forEach(item=>{
+  item.addEventListener("click" , ()=>{
+    accordionContent.forEach(item=>{
+      item.classList.toggle("show");
+    });
   });
 });

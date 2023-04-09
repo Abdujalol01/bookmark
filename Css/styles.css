@@ -263,9 +263,6 @@ img{
 .tabs__panel {
   display: none;
 }
-.tabs__panel--active{
-  display: block;
-}
 .feature-tab-panel {
   display: flex;
   align-items: center;
@@ -581,4 +578,10 @@ img{
 .fa-twitter {
   width: 24px;
   height: 20px;
+}
+.show{
+  display: block;
+}
+.hide{
+  display: none;
 }
