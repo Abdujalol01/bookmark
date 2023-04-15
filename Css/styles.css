@@ -260,7 +260,7 @@ img{
   background-repeat: no-repeat;
   background-position: calc(50% - 580px) 156px ;
 }
-.tabs__panel {
+.tabs__panel{
   display: none;
 }
 .feature-tab-panel {
